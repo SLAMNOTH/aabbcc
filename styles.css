@@ -1,0 +1,78 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #ff0000, #007f00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  /* Center Content */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Text Styling */
+  .line {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    overflow: hidden; /* Ensures animation is clean */
+    display: block;
+    margin: 0;
+  }
+  
+  /* Line Animation */
+  .line span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slideIn 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  
+  .line1 { animation-delay: 0.5s; } /* First line */
+  .line2 { animation-delay: 3s; }  /* Second line */
+  .line3 { animation-delay: 5.5s; } /* Third line */
+  .line4 { animation-delay: 8s; }  /* Fourth line */
+  
+  /* Keyframes for Text Animation */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  /* Christmas Styling */
+  body {
+    background: radial-gradient(circle, #ff0000, #007f00);
+  }
+  
+  span {
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.8),
+                 0px 5px 10px rgba(255, 215, 0, 0.5);
+  }
+
+  #countdown-timer h2 {
+    font-size: 1.0rem;
+    margin-bottom: 10px;
+  }
+  
+  #timer {
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.8),
+                 0px 5px 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  
