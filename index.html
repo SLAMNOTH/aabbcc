@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerstkaart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="line"><span class="line1">Daar is de jaarlijkse kerstkaart weer</span></h1>
+        <h1 class="line"><span class="line2">Dit keer smelt de inkt niet als je hem aanraakt :)</span></h1>
+        <h1 class="line"><span class="line3">Ik wens jullie allemaal fijne feestdagen</span></h1>
+        <h1 class="line"><span class="line4">en een gelukkig en gezond 2025!</span></h1>
+      
+        <!-- Countdown Timer -->
+        <div id="countdown-timer" style="margin-top: 100px; text-align: center;">
+
+          <h2>De volgende vlog komt over:</h2>
+          <p id="timer" style="font-size: 1rem; font-weight: bold; margin: 0;"></p>
+        </div>
+      </div>
+      
+
+      <script>
+        // Set the target date (use UTC format or local time)
+        const targetDate = new Date("2024-12-13T19:00:00Z").getTime();
+      
+        // Function to update the timer
+        function updateTimer() {
+          const now = new Date().getTime(); // Current time in milliseconds
+          const timeRemaining = targetDate - now;
+      
+          if (timeRemaining <= 0) {
+            document.getElementById("timer").innerText = "De vlog is nu live!";
+            clearInterval(timerInterval); // Stop the interval when time is up
+            return;
+          }
+      
+          // Calculate remaining time
+          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+          // Display the countdown
+          document.getElementById("timer").innerText = `${days} dagen, ${hours} uren, ${minutes} minuten, ${seconds} seconden`;
+        }
+      
+        // Initialize the timer and refresh every second
+        updateTimer(); // Call it immediately to avoid 1s delay
+        const timerInterval = setInterval(updateTimer, 1000);
+      </script>
+      
+      
+  
+</body>
+</html>
